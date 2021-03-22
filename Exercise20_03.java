@@ -1,9 +1,18 @@
 package chapter20;
 
-import java.util.Scanner;
+import java.util.*;
 
+
+/*
+ * Author: Jason Snow
+ * Date: 03/22/2021
+ * 
+ * This program stores States and Capitals in a random order to be displayed in that random order to the user, who wil be given a state and guess the capital.
+ */
 public class Exercise20_03 {
 	public static void main(String[] args) {
+		
+		
 		String[][] stateCapital = {
 				{"Alabama", "Montgomery"},
 				{"Alaska", "Juneau"},
@@ -56,23 +65,31 @@ public class Exercise20_03 {
 				{"Wisconsin", "Madison"},
 				{"Wyoming", "Cheyenne"}
 		};
+		List<String[]> arrayStateCap = new ArrayList<String[]>();
+		for (int k = 0; k < stateCapital.length; k++) {
+			String[] hold = {stateCapital[k][0], stateCapital[k][1]};
+			int place = (int)(Math.random()*arrayStateCap.size());
+			arrayStateCap.add(place, hold);
+		}
 		
 		Scanner input = new Scanner(System.in);
 		
 		int correctCount = 0;
 		
 		
-		for (int i = 0; i < stateCapital.length; i++) {
+		for (int i = 0; i < arrayStateCap.size(); i++) {
+			String[] holder = new String[2];
+			holder = arrayStateCap.get(i);
 			// Prompt the user with a question
-			System.out.print("What is the capital of " + stateCapital[i][0] + "? ");
+			System.out.print("What is the capital of " + holder[0] + "? ");
 			String capital = input.nextLine().trim().toLowerCase();
 			
-			if (capital.toLowerCase().equals(stateCapital[i][1].toLowerCase())) {
+			if (capital.toLowerCase().equals(holder[1].toLowerCase())) {
 				System.out.println("Your answer is correct");
 				correctCount++;
 			}
 			
-			else System.out.println("The correct answer should be " + stateCapital[i][1]);
+			else System.out.println("The correct answer should be " + holder[1]);
 		}
 		
 		System.out.println("The correct count is " + correctCount);
