@@ -29,8 +29,7 @@ public class Exercise24_01 {
     list2 = new MyArrayList<String>(name2);   
     System.out.println("list1:" + list1);
     System.out.println("list2:" + list2);
-    System.out.println( "" + list1.size());
-    System.out.println(list1.retainAll(list2));
+    list1.retainAll(list2);
     
     System.out.println("After retainAll:" + list1 + "\n");
   }

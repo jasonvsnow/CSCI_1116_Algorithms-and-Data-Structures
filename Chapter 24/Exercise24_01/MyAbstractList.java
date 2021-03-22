@@ -71,10 +71,20 @@ public abstract class MyAbstractList<E> implements MyList<E> {
 	/** Retains the elements in this list that are also in otherList 
 	* Returns true if this list changed as a result of the call */ 
 	public boolean retainAll(MyList<E> otherList) {
+		int[] holder = new int[size];
 		boolean changed = false;
-		if (addAll(otherList)) {
-			removeAll(otherList);
-			changed = true;
+		for (int i = 0; i < size; i++) {
+			if (otherList.contains(get(i))) {
+				holder[i] = 2;
+				changed = true;
+			}
+		}
+		if (changed) {
+			for (int k = 0; k < size; k++) {
+				if (holder[k] != 2) {
+					remove(k);
+				}
+			}
 		}
 		return changed;
 	}
