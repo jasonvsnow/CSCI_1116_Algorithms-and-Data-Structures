@@ -15,7 +15,13 @@ public class WordOccurence implements Comparable<WordOccurence> {
 	}
 	
 	public int getCount() {
-		return this.count;
+		return count;
+	}
+	public String getWord() {
+		return word;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}
 	
 	@Override
@@ -29,6 +35,9 @@ public class WordOccurence implements Comparable<WordOccurence> {
 		else return 0;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return word + " " + count;
+	}
 	
 }
