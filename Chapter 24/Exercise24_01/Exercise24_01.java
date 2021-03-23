@@ -1,7 +1,15 @@
 package exercise24_01;
 
 import java.util.*;
-
+/*
+ * Author: 
+ * Date: 03/21/2021
+ * 
+ * This program, several various classes, was edited to define and implement methods to add all
+ * elements from one list to another, remove all elements from a list that exist in another list,
+ * and retain all shared elements between two lists for one. It then displays this working, setting two
+ * lists repeatedly, printing them, running an operation on one with the other, and displaying the result.
+ */
 public class Exercise24_01 {
   public static void main(String[] args) {
     new Exercise24_01();
