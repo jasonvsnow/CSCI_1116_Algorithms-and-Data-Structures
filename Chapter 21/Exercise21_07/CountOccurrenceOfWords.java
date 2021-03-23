@@ -10,7 +10,9 @@ public class CountOccurrenceOfWords {
 
 		// Create a TreeMap to hold words as key and count as value
 		Map<String, Integer> map = new LinkedHashMap<>();
-
+		ArrayList<WordOccurence> count = new ArrayList<>();
+		
+		
 		String[] words = text.split("[\\s+\\p{P}]");
 		for (int i = 0; i < words.length; i++) {
 			String key = words[i].toLowerCase();
