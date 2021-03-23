@@ -1,5 +1,13 @@
 package exercise24_03;
 
+/*
+ * Author: Jason Snow
+ * Date: 03/23/2021
+ * 
+ * This program was edited to create a doubly linked list out of a simple linked list.
+ * 
+ */
+
 class Exercise24_03 {
 	public static void main(String[] args) {
 		TwoWayLinkedList<Integer> list = new TwoWayLinkedList<Integer>();
@@ -12,11 +20,12 @@ class Exercise24_03 {
 		iterator.next();
 		iterator.next();
 		iterator.next();
-
+		
+		
 		//System.out.print(iterator.next() + " ");
 
 		System.out.println();
 		while (iterator.hasPrevious())
-		  System.out.print(iterator.previous() + " ");
+		   System.out.print(iterator.previous() + " ");
 	}
 }

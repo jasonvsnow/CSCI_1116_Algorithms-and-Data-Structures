@@ -46,8 +46,8 @@ class TwoWayLinkedList<E> extends java.util.AbstractSequentialList<E> {
 			tail = head;
 
 		if (head != tail)
+			(head.next).previous = head;
 			// For a two-way linked list, make the next item's previous element the head
-			newNode.next = head;
 	}
 
 	/** Add an element to the end of the list */
