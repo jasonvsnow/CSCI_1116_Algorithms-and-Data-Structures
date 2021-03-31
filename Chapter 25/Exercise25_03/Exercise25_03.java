@@ -299,8 +299,10 @@ public class Exercise25_03 {
     	List<TreeNode<E>> compare = new ArrayList<TreeNode<E>>();
     	TreeNode<E> current = root;
     	TreeNode<E> lastSplit = current;
-    	//right side
+    	
+   
     	hold.push(current);
+
     	while (!hold.empty()) {
     		current = hold.peek();
     		if (current.left != null && !compare.contains(current.left)) {
@@ -316,9 +318,6 @@ public class Exercise25_03 {
     			
     		}
     	}
-    	//left side
-    	
-    	
     }
   }
 }
