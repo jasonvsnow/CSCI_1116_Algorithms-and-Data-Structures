@@ -1,7 +1,14 @@
 package exercise25_03;
 
 import java.util.*;
-
+/*
+ * Author: Jason Snow
+ * Date: 04/01/2021
+ * 
+ * This program was edited to include and implement the nonRecursiveInorder method that displays the elemnts of a BST in
+ * order without using recursion. 
+ * 
+ */
 public class Exercise25_03 {
   public static void main(String[] args) {
 //    BST<Integer> tree = new BST<Integer>();
